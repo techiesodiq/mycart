@@ -179,7 +179,6 @@ class ProductProvider extends Component {
 					decrement: this.decrement,
 					removeItem: this.removeItem,
 					clearCart: this.clearCart,
-					addTotals: this.addTotals,
 				}}
 			>
 				{this.props.children}
