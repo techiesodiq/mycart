@@ -45,3 +45,28 @@ body {
 	font-size: 1.2rem;
 	color: var(--mainYellow);
 }
+
+/* .flex-container {
+	display: flex;
+}
+
+.flex-container > div {
+	height: 18rem;
+	margin-bottom: 10px;
+}
+*/
+.tag-name {
+	height: 20px;
+	font-size: medium;
+	font-family: sans-serif;
+}
+
+.special-btn {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}

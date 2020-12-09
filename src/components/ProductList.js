@@ -12,8 +12,8 @@ export default class ProductList extends Component {
 					<div className="py-5">
 						<div className="container">
 							<Title name="our" title="products" />
-							<div className="row">
-								<ProductConsumer>
+							<div className="row product-tag">
+								<ProductConsumer className="tag-name">
 									{(value) => {
 										return value.products.map((product) => {
 											return <Product key={product.id} product={product} />;

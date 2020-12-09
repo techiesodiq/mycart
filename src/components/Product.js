@@ -14,29 +14,37 @@ class Product extends Component {
 				<div className="card">
 					<ProductConsumer>
 						{(value) => (
-							<div
-								className="img-container p-5"
-								onClick={() => value.handleDetail(id)}
-							>
-								<Link to="/details">
-									<img src={image} alt="product" className="card-img-top" />
-								</Link>
-								<button
-									className="cart-btn"
-									disabled={inCart ? true : false}
-									onClick={() => {
-										value.addToCart(id);
-									}}
+							<div className="flex-container">
+								<div
+									className="img-container p-5 my-image-container"
+									onClick={() => value.handleDetail(id)}
 								>
-									{inCart ? (
-										<p className="text-capitalize mb-0" disabled>
-											{" "}
-											in Cart
-										</p>
-									) : (
-										<FontAwesomeIcon icon={faCartPlus} />
-									)}
-								</button>
+									<Link to="/details">
+										<img
+											src={image}
+											alt="product"
+											className="card-img-top"
+											width="150px"
+											height="170px"
+										/>
+									</Link>
+									<button
+										className="cart-btn special-btn"
+										disabled={inCart ? true : false}
+										onClick={() => {
+											value.addToCart(id);
+										}}
+									>
+										{inCart ? (
+											<p className="text-capitalize mb-0" disabled>
+												{" "}
+												in Cart
+											</p>
+										) : (
+											<FontAwesomeIcon icon={faCartPlus} />
+										)}
+									</button>
+								</div>
 							</div>
 						)}
 					</ProductConsumer>
